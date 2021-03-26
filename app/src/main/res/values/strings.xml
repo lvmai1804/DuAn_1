@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DuAn_1</string>
+    <string name="username">Tai khoan</string>
+    <string name="password">Mat Khau</string>
+    <string name="btnlogin">Dang Nhap</string>
+    <string name="btnsignup">Dang ky</string>
+    <string name="remember">Ghi nho dang nhap</string>
+    <string name="nameproduct">Ten san pham</string>
+    <string name="price">10000</string>
+    <string name="tilename">Hi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
