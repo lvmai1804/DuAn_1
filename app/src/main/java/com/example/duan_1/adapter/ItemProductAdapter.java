@@ -1,4 +1,4 @@
-package com.example.duan_1;
+package com.example.duan_1.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,12 +10,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.duan_1.interface_.MyOnClickItemListener;
+import com.example.duan_1.model.Item_Product;
+import com.example.duan_1.R;
+
 import java.util.List;
 
 public class ItemProductAdapter extends RecyclerView.Adapter<ItemProductAdapter.ViewHolder> {
     Context context;
     List<Item_Product> list;
-    MyOnClickListener myOnClickListener;
+    MyOnClickItemListener myOnClickItemListener;
 
     public ItemProductAdapter(Context context, List<Item_Product> list) {
         this.context = context;
@@ -23,8 +27,8 @@ public class ItemProductAdapter extends RecyclerView.Adapter<ItemProductAdapter.
 
     }
 
-    public void setMyOnClickListener(MyOnClickListener myOnClickListener) {
-        this.myOnClickListener = myOnClickListener;
+    public void setMyOnClickItemListener(MyOnClickItemListener myOnClickListener) {
+        this.myOnClickItemListener = myOnClickListener;
     }
 
     @NonNull
@@ -41,10 +45,9 @@ public class ItemProductAdapter extends RecyclerView.Adapter<ItemProductAdapter.
         holder.tv_name_Product.setText(item_product.getProductName());
         holder.img_Item_Main.setImageResource(item_product.getImageItem());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-                myOnClickListener.onClick(list.get(position));
+                myOnClickItemListener.onClick(list.get(position));
             }
         });
     }
