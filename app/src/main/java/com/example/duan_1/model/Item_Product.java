@@ -1,4 +1,4 @@
-package com.example.duan_1;
+package com.example.duan_1.model;
 
 public class Item_Product {
     private int imageItem;
